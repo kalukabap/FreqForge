@@ -76,7 +76,6 @@ class MainActivity : AppCompatActivity() {
         root.addView(tvPresetLabel)
 
         val tvPresetDesc = TextView(this).apply {
-            id = View.generateViewId()
             text = "Tap a preset to configure all channels"
             setTextColor(0xFFA0A0B0.toInt())
             textSize = 11f
