@@ -28,8 +28,8 @@ class AudioEngine {
     private val channels = mutableListOf<Channel>()
     private var masterVolume = 0.8f
 
-    // Phase accumulators per channel (float to avoid constant conversion)
-    private val phases = FloatArray(MAX_CHANNELS)
+    // Phase accumulators per channel (DoubleArray for precision)
+    private val phases = DoubleArray(MAX_CHANNELS)
 
     // Buffer for one chunk of samples
     private val bufferSize = AudioTrack.getMinBufferSize(
@@ -132,8 +132,8 @@ class AudioEngine {
             for (chIdx in 0 until MAX_CHANNELS) {
                 val ch = channels[chIdx]
                 if (!ch.isEnabled || ch.volume <= 0f) {
-                    phases[chIdx] += TWO_PI * ch.frequency / SAMPLE_RATE
-                    if (phases[chIdx] > TWO_PI) phases[chIdx] -= TWO_PI
+                    phases[chIdx] = phases[chIdx] + TWO_PI * ch.frequency / SAMPLE_RATE
+                    if (phases[chIdx] > TWO_PI) phases[chIdx] = phases[chIdx] - TWO_PI
                     continue
                 }
 
@@ -151,8 +151,8 @@ class AudioEngine {
                 }
 
                 // Advance phase
-                phases[chIdx] += TWO_PI * freq / SAMPLE_RATE
-                if (phases[chIdx] > TWO_PI) phases[chIdx] -= TWO_PI
+                phases[chIdx] = phases[chIdx] + TWO_PI * freq / SAMPLE_RATE
+                if (phases[chIdx] > TWO_PI) phases[chIdx] = phases[chIdx] - TWO_PI
 
                 // Apply pan (stereo positioning)
                 val leftGain = vol * if (pan <= 0.0) 1.0 else (1.0 - pan)

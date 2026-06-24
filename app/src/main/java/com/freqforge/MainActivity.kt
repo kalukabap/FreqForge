@@ -66,10 +66,7 @@ class MainActivity : AppCompatActivity() {
             setCardBackgroundColor(0xFF0F3460.toInt())
             cardElevation = 4f
             radius = 12f
-            contentPaddingLeft = 16
-            contentPaddingTop = 12
-            contentPaddingRight = 16
-            contentPaddingBottom = 16
+            setContentPadding(16, 12, 16, 16)
         }
 
         // Main vertical layout inside the card
