@@ -94,7 +94,7 @@ class AudioEngine {
 
         audioTrack = track
         isPlaying = true
-        phases.fill(0f)
+        phases.fill(0.0)
 
         track.play()
 
@@ -114,7 +114,7 @@ class AudioEngine {
         isPlaying = false
         playbackThread?.join(500)
         playbackThread = null
-        phases.fill(0f)
+        phases.fill(0.0)
     }
 
     fun togglePlay(): Boolean {
