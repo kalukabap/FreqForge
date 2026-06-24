@@ -103,6 +103,17 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>
 
+        <!-- Presets & Effects Container -->
+        <LinearLayout
+            android:id="@+id/effectsContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardMaster" />
+
         <!-- Channel Panels Container -->
         <LinearLayout
             android:id="@+id/channelContainer"
@@ -112,7 +123,7 @@
             android:layout_marginTop="12dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardMaster" />
+            app:layout_constraintTop_toBottomOf="@+id/effectsContainer" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
