@@ -1,0 +1,34 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group
+        android:translateX="22"
+        android:translateY="22">
+        <!-- Sound wave circle -->
+        <path
+            android:fillColor="#FFE94560"
+            android:pathData="M32,0C49.67,0 64,14.33 64,32C64,49.67 49.67,64 32,64C14.33,64 0,49.67 0,32C0,14.33 14.33,0 32,0Z" />
+        <!-- Wave arcs -->
+        <path
+            android:strokeColor="#FFFFFFFF"
+            android:strokeWidth="3"
+            android:fillColor="#00000000"
+            android:pathData="M20,28Q22,20 32,20Q42,20 44,28" />
+        <path
+            android:strokeColor="#FFFFFFFF"
+            android:strokeWidth="3"
+            android:fillColor="#00000000"
+            android:pathData="M16,36Q20,16 32,16Q44,16 48,36" />
+        <path
+            android:strokeColor="#FFFFFFFF"
+            android:strokeWidth="3"
+            android:fillColor="#00000000"
+            android:pathData="M12,44Q18,12 32,12Q46,12 52,44" />
+        <!-- Center dot -->
+        <path
+            android:fillColor="#FFFFFFFF"
+            android:pathData="M29,38m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0" />
+    </group>
+</vector>

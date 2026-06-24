@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="darkBg">#FF1A1A2E</color>
+    <color name="cardBg">#FF16213E</color>
+    <color name="accent">#FFE94560</color>
+    <color name="textPrimary">#FFFFFFFF</color>
+    <color name="textSecondary">#FFA0A0B0</color>
+    <color name="channelBg">#FF0F3460</color>
+    <color name="enabledAccent">#FF4ECDC4</color>
+</resources>
